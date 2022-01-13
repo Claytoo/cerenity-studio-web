@@ -45,7 +45,8 @@
     <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
     -->
     <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet">
+    <!--<link href="<?= base_url('/assets/css/style.css') ?>" rel="stylesheet">-->
+    <link href="<?= base_url('/proposal/css/style.css') ?>" rel="stylesheet">
 </head>
 
 <body id="page-top">
@@ -85,8 +86,8 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="<?= base_url('/submit-proposal') ?>">Submit
                                     Proposal</a></li>
-                            <li><a class="dropdown-item" href="<?= base_url('/proposal-list') ?>">Proposal
-                                    List</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('/proposal-status') ?>">Proposal Status</a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
@@ -280,19 +281,19 @@
         <div class="container position-relative row gy-4 mt-5 justify-content-center" data-aos="zoom-in"
             data-aos-delay="100">
             <div class="col-xl-2 col-md-4">
-                <img src="static/images/main/partner-1.png" alt="Write Business Proposal">
+                <img src="<?= base_url('/static/images/main/partner-1.png') ?>" alt="Write Business Proposal">
                 <h2>Write Business Proposal</h2>
             </div>
             <div class="col-xl-2 col-md-4">
-                <img src="static/images/main/partner-2.png" alt="Check Business Proposal">
+                <img src="<?= base_url('/static/images/main/partner-2.png') ?>" alt="Check Business Proposal">
                 <h2>Check Business Proposal</h2>
             </div>
             <div class="col-xl-2 col-md-4">
-                <img src="static/images/main/partner-3.png" alt="Coordinate the contract detail">
+                <img src="<?= base_url('/static/images/main/partner-3.png') ?>" alt="Coordinate the contract detail">
                 <h2>Coordinate the contract detail</h2>
             </div>
             <div class="col-xl-2 col-md-4">
-                <img src="static/images/main/partner-4.png" alt="Conclusion of contract">
+                <img src="<?= base_url('/static/images/main/partner-4.png') ?>" alt="Conclusion of contract">
                 <h2>Conclusion of contract</h2>
             </div>
         </div>

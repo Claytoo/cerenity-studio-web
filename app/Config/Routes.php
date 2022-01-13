@@ -34,9 +34,17 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/submit-proposal', 'SubmitProposal::index');
 $routes->add('/submit-proposal', 'SubmitProposal::insertData');
-$routes->add('/proposal-list', 'SubmitProposal::proposalList');
+$routes->get('/proposal-list', 'SubmitProposal::proposalList');
+$routes->get('/proposal-status', 'SubmitProposal::proposalListPublic');
 $routes->get('/edit-request/(:num)', 'SubmitProposal::editRequest/$1');
 $routes->get('/delete-request/(:num)', 'SubmitProposal::deleteRequest/$1');
+$routes->get('/dashboard', 'LoginController::dashboard');
+$routes->get('/login', 'LoginController::loginPage');
+$routes->add('/login', 'LoginController::loginCheck');
+$routes->get('/register', 'LoginController::registerPage');
+$routes->add('/register', 'LoginController::regisAdmin');
+$routes->get('/accept-request/(:num)', 'SubmitProposal::acceptRequest/$1');
+$routes->get('/decline-request/(:num)', 'SubmitProposal::declineRequest/$1');
 
 /*
  * --------------------------------------------------------------------

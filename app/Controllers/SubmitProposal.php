@@ -18,6 +18,19 @@ class SubmitProposal extends BaseController{
     }
 
     public function proposalList(){
+        if(session()->get('email')==''){
+            session()->setFlashdata('failed', 'Silahkan Login terlebih dahulu!');
+            return redirect()->to(base_url('/login'));
+        }
+        $data = [
+            'title' => 'Proposal List',
+            'proposal' => $this->jobModel->getData(),
+            'isi' => 'admin/proposal-list',
+        ];
+        echo view('admin/proposal-list',$data);
+    }
+
+    public function proposalListPublic(){
         $data = [
             'title' => 'Proposal List',
             'proposal' => $this->jobModel->getData(),
@@ -27,6 +40,7 @@ class SubmitProposal extends BaseController{
     }
 
     public function insertData(){
+
         if ($this->request->getMethod() === 'post') {
 
 			$rules = [
@@ -64,6 +78,10 @@ class SubmitProposal extends BaseController{
     }
 
     public function editRequest($proposal_id){
+        if(session()->get('email')==''){
+            session()->setFlashdata('failed', 'Silahkan Login terlebih dahulu!');
+            return redirect()->to(base_url('/login'));
+        }
         $data = [
             'title' => 'Edit Data',
             'proposal' => $this->jobModel->editData($proposal_id),
@@ -72,15 +90,37 @@ class SubmitProposal extends BaseController{
         echo view('proposal-edit',$data);
     }
 
-    public function updateRequest($proposal_id){
+    public function acceptRequest($proposal_id){
+        if(session()->get('email')==''){
+            session()->setFlashdata('failed', 'Silahkan Login terlebih dahulu!');
+            return redirect()->to(base_url('/login'));
+        }
+        $status = 'Approved';
         $data=[
-            'status' => $this->request->getPost('status'),
+            'status' => $status,
+        ];
+        $this->jobModel->updateData($data, $proposal_id);
+        return redirect()->to(base_url('/proposal-list'));
+    }
+
+    public function declineRequest($proposal_id){
+        if(session()->get('email')==''){
+            session()->setFlashdata('failed', 'Silahkan Login terlebih dahulu!');
+            return redirect()->to(base_url('/login'));
+        }
+        $status = 'Declined';
+        $data=[
+            'status' => $status,
         ];
         $this->jobModel->updateData($data, $proposal_id);
         return redirect()->to(base_url('/proposal-list'));
     }
 
     public function deleteRequest($proposal_id){
+        if(session()->get('email')==''){
+            session()->setFlashdata('failed', 'Silahkan Login terlebih dahulu!');
+            return redirect()->to(base_url('/login'));
+        }
         $this->jobModel->deleteData($proposal_id);
         return redirect()->to(base_url('/proposal-list'));
     }
