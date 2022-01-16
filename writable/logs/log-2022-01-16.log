@@ -1,0 +1,27 @@
+CRITICAL - 2022-01-16 03:02:12 --> Invalid file: admin/admin-register.php
+#0 C:\xampp\htdocs\cerenity-studio-web\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/admin-reg...')
+#1 C:\xampp\htdocs\cerenity-studio-web\system\Common.php(1097): CodeIgniter\View\View->render('admin/admin-reg...', Array, true)
+#2 C:\xampp\htdocs\cerenity-studio-web\app\Controllers\LoginController.php(80): view('admin/admin-reg...')
+#3 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(824): App\Controllers\loginController->regisAdmin()
+#4 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loginController))
+#5 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\cerenity-studio-web\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-16 03:07:48 --> Invalid file: admin/admin-register.php
+#0 C:\xampp\htdocs\cerenity-studio-web\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/admin-reg...')
+#1 C:\xampp\htdocs\cerenity-studio-web\system\Common.php(1097): CodeIgniter\View\View->render('admin/admin-reg...', Array, true)
+#2 C:\xampp\htdocs\cerenity-studio-web\app\Controllers\LoginController.php(80): view('admin/admin-reg...')
+#3 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(824): App\Controllers\loginController->regisAdmin()
+#4 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\loginController))
+#5 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\cerenity-studio-web\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}
+CRITICAL - 2022-01-16 03:10:17 --> Invalid file: admin/admin-register.php
+#0 C:\xampp\htdocs\cerenity-studio-web\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/admin-reg...')
+#1 C:\xampp\htdocs\cerenity-studio-web\system\Common.php(1097): CodeIgniter\View\View->render('admin/admin-reg...', Array, true)
+#2 C:\xampp\htdocs\cerenity-studio-web\app\Controllers\LoginController.php(80): view('admin/admin-reg...')
+#3 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(824): App\Controllers\LoginController->regisAdmin()
+#4 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(410): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+#5 C:\xampp\htdocs\cerenity-studio-web\system\CodeIgniter.php(318): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\xampp\htdocs\cerenity-studio-web\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 {main}

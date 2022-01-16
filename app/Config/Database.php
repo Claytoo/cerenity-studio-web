@@ -33,8 +33,11 @@ class Database extends Config
     public $default = [
         'DSN'      => '',
         'hostname' => 'localhost',
+        //'username' => 'sfcereni_cerenity-studio1',
         'username' => 'root',
+        //'password' => ',7}tOEI.#hvO',
         'password' => '',
+        //'database' => 'sfcereni_cerenity-studio',
         'database' => 'cerenity-studio',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',

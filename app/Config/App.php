@@ -24,8 +24,9 @@ class App extends BaseConfig
      * @var string
      */
     
-    /**public $baseURL = 'http://localhost:8080/';*/
-    //public $baseURL = 'http://cerenity-studio.sfcerenity.org/public/';
+    /**
+     * public $baseURL = 'http://localhost:8080/';
+     * public $baseURL = 'http://cerenity-studio.sfcerenity.org/public/';*/
 
     public $baseURL = 'http://localhost/cerenity-studio-web/public/';
 

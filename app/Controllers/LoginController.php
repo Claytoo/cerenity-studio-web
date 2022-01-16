@@ -4,7 +4,7 @@ use App\Models\loginModel;
 use CodeIgniter\Validation\Rules;
 use PDO;
 
-class loginController extends BaseController{
+class LoginController extends BaseController{
 
     public function __construct()
     {
@@ -77,7 +77,7 @@ class loginController extends BaseController{
         ]);
 
         if(!$rules){
-            echo view('admin/admin-register');
+            echo view('admin/register');
         }else{
             $model = new loginModel();
             $newData = [

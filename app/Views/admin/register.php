@@ -27,26 +27,26 @@
                                     <form action="<?= base_url('/register') ?>" method="post">
                                         <div class="form-group">
                                             <label class="mb-1 text-white"><strong>First Name</strong></label>
-                                            <input type="text" name="fname" id="fname" class="form-control" placeholder="John">
+                                            <input type="text" name="fname" id="fname" class="form-control" placeholder="John (min 4 char)" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1 text-white"><strong>Last Name</strong></label>
-                                            <input type="text" name="lname" id="lname" class="form-control" placeholder="Doe">
+                                            <input type="text" name="lname" id="lname" class="form-control" placeholder="Doen (min 4 char)" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1 text-white"><strong>Email</strong></label>
-                                            <input type="email" name="email" id="email" class="form-control" placeholder="hello@example.com">
+                                            <input type="email" name="email" id="email" class="form-control" placeholder="hello@example.com (must include @ and .)" required>
                                         </div>
                                         <div class="form-group">
                                             <label class="mb-1 text-white"><strong>Password</strong></label>
-                                            <input type="password" name="password" id="password" class="form-control" placeholder="Password">
+                                            <input type="password" name="password" id="password" class="form-control" placeholder="Password (min 6 char)" required>
                                         </div>
                                         <div class="text-center mt-4">
                                             <button type="submit" class="btn bg-white text-primary btn-block">Sign me up</button>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p class="text-white">Already have an account? <a class="text-white" href="page-login.html">Sign in</a></p>
+                                        <p class="text-white">Already have an account? <a class="text-white" href="<?= base_url('/login') ?>">Sign in</a></p>
                                     </div>
                                 </div>
                             </div>
